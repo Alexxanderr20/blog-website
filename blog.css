@@ -1,0 +1,60 @@
+/*
+    =====================
+        Website Header
+    =====================
+*/
+
+    #website-header
+    {
+        grid-area: header;
+        text-align: center;
+        background-color: green;
+    }
+
+    /*
+        =====================
+            Website Body
+        =====================
+    */
+
+    #blog-main-website
+    {
+        grid-area: main;
+        background-color: blue;
+    }
+
+    #about-website
+    {
+        grid-area: sidebar;
+        background-color: red;
+    }
+
+    #about-website p
+    {
+
+    }
+
+    /*
+        =====================
+            Footer Website
+        ---------------------
+    */
+
+    #footer-website
+    {
+        grid-area: footer;
+        text-align: center;
+        background-color: yellow;
+    }
+
+
+    .container
+{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+}
