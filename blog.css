@@ -1,14 +1,29 @@
+
 /*
     =====================
         Website Header
     =====================
 */
 
+    *
+    {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    img
+    {
+        width: 25rem;
+        height: 10rem;
+    }
+
     #website-header
     {
+        color: white;
         grid-area: header;
         text-align: center;
-        background-color: green;
+        padding-top: 2rem;
+        background-color: rgb(101, 67, 121);
     }
 
     /*
@@ -17,22 +32,30 @@
         =====================
     */
 
-    #blog-main-website
+    #blog-entry-one
     {
-        grid-area: main;
-        background-color: blue;
+        grid-area: blog-one;
+        background-color: rgb(196, 196, 196);
+    }
+
+    #blog-entry-two
+    {
+        grid-area: blog-two;
+        background-color: white;
+    }
+
+    #blog-entry-three
+    {
+        grid-area: blog-three;
+        background-color: rgb(196, 196, 196);
     }
 
     #about-website
     {
         grid-area: sidebar;
-        background-color: red;
+        background-color: rgb(193, 140, 224);
     }
 
-    #about-website p
-    {
-
-    }
 
     /*
         =====================
@@ -42,19 +65,24 @@
 
     #footer-website
     {
+        color: white;
         grid-area: footer;
         text-align: center;
-        background-color: yellow;
+        padding: 4rem;
+        background-color: rgb(101, 67, 121)
     }
 
 
     .container
 {
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
+    grid-template-rows: 10rem 15rem;
+    grid-template-columns: 75% 25%;
     grid-template-areas:
         "header header"
-        "main sidebar"
+        "blog-one sidebar"
+        "blog-two sidebar"
+        "blog-three sidebar"
+        ". sidebar"
         "footer footer";
 }
