@@ -9,21 +9,31 @@
     {
         margin: 0;
         font-size: 1.1rem;
+        line-height: 2rem;
     }
 
-    img
+    li
+    {
+        display: inline;
+        padding: 1rem;
+        text-align: center;
+        list-style: none;
+    }
+
+    /* img
     {
         width: 25rem;
         height: 10rem;
-    }
+    } */
 
     #website-header
     {
         color: white;
+        border: 0.02rem solid black;
         grid-area: header;
         text-align: center;
         padding-top: 2rem;
-        background-color: rgb(101, 67, 121);
+        background-color: rgb(22, 125, 221);
     }
 
     /*
@@ -35,7 +45,7 @@
     #blog-entry-one
     {
         grid-area: blog-one;
-        background-color: rgb(196, 196, 196);
+        /* background-color: rgb(196, 196, 196); */
     }
 
     #blog-entry-two
@@ -47,13 +57,13 @@
     #blog-entry-three
     {
         grid-area: blog-three;
-        background-color: rgb(196, 196, 196);
+        /* background-color: rgb(196, 196, 196); */
     }
 
     #about-website
     {
         grid-area: sidebar;
-        background-color: rgb(193, 140, 224);
+        background-color: white;
     }
 
 
@@ -68,21 +78,28 @@
         color: white;
         grid-area: footer;
         text-align: center;
-        padding: 4rem;
-        background-color: rgb(101, 67, 121)
+        padding: 3rem;
+        background-color: rgb(22, 125, 221);
+    }
+
+    footer span
+    {
+        display: flex;
+        align-self: auto;
+        font-size: 0.9rem;
     }
 
 
     .container
 {
     display: grid;
-    grid-template-rows: 10rem 15rem;
-    grid-template-columns: 75% 25%;
+    grid-template-rows: 8rem 2rem 12rem 12rem 12rem;
+    grid-template-columns:  5% 65% 5% 25%;
     grid-template-areas:
-        "header header"
-        "blog-one sidebar"
-        "blog-two sidebar"
-        "blog-three sidebar"
-        ". sidebar"
-        "footer footer";
+        "header header header header"
+        ". . . ."
+        " . blog-one . sidebar"
+        ". blog-two . sidebar"
+        ". blog-three . ."
+        "footer footer footer footer";
 }
